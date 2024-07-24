@@ -1,0 +1,51 @@
+package com.example;
+import java.util.Scanner;
+public class Student {
+	public static void main(String[]args)
+	{
+		int number,marks=0;
+		int i;
+		int total_marks=0;
+		int avg=0;
+		String name;
+		Scanner scanner=new Scanner(System.in);
+		System.out.println("Enter the Student name:");
+		name=scanner.nextLine();
+		System.out.println("Enter your number of Subjects:");
+		number=scanner.nextInt();
+		for(i=0;i<number;i++)
+		{
+			System.out.println("Enter the Marks of each Subject:");
+			marks=scanner.nextInt();
+		    total_marks+=marks;
+		}
+		System.out.println("Total Marks obtained:"+total_marks);
+		avg=total_marks/number;
+		System.out.println("Average marks obtained:"+avg);
+		if(avg>=90&&avg<=100)
+		{
+			System.out.println("Grade obtained by the Student:"+"A");
+		}
+		else if(avg>=80&&avg<=89)
+		{
+			System.out.println("Grade obtained by the Student:"+"B");
+		}
+		else if(avg>=70&&avg<=79)
+		{
+			System.out.println("Grade obtained by the Student:"+"C");
+		}
+		else if(avg>=60&&avg<=69)
+		{
+			System.out.println("Grade obtained by the Student:"+"D");
+		}
+		else if(avg>=50&&avg<=59)
+		{
+			System.out.println("Grade obtained by the Student:"+"E");
+		}
+		else
+		{
+			System.out.println("Student Failed");
+		}
+	}
+
+}
